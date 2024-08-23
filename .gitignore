@@ -1,6 +1,9 @@
 # Compiled Lua sources
 luac.out
 
+# Ignore lazy-lock files
+lazyvim.json
+
 # luarocks build files
 *.src.rock
 *.zip
@@ -32,6 +35,7 @@ luac.out
 *.dylib
 
 # Executables
+.DS_Store
 *.exe
 *.out
 *.app
