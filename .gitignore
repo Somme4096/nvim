@@ -3,6 +3,7 @@ luac.out
 
 # Ignore lazy-lock files
 lazyvim.json
+lazy-lock.json
 
 # luarocks build files
 *.src.rock
