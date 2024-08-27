@@ -18,12 +18,11 @@ return {
       lualine_require.require = require
 
       local icons = LazyVim.config.icons
-
       local function modified()
         if vim.bo.modified then
-          return ""
+          return "[+]"
         elseif vim.bo.modifiable == false or vim.bo.readonly == true then
-          return ""
+          return "[-]"
         end
         return ""
       end
@@ -60,14 +59,17 @@ return {
               icon = "󰘬",
             },
             LazyVim.lualine.root_dir(),
-            {
-              modified, --color = { bg = colors.Kanagawablack }
-            },
+            function()
+              return require("arrow.statusline").text_for_statusline_with_icons()
+            end,
           },
 
           lualine_c = {
             { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
             { LazyVim.lualine.pretty_path() },
+            {
+              modified, --color = { bg = colors.Kanagawablack }
+            },
 
             {
               "diagnostics",
@@ -145,13 +147,13 @@ return {
             "filesize",
           },
           lualine_z = {
-            function()
-              return "󰦪"
-            end,
-            -- "progress",
             -- function()
-            --   return "󰉸"
+            --   return "󰦪"
             -- end,
+            -- "progress",
+            function()
+              return "󰉸"
+            end,
             "location",
           },
         },

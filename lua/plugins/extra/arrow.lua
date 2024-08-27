@@ -1,8 +1,27 @@
 return {
-  "otavioschwanck/arrow.nvim",
+  "hungyiloo/arrow.nvim",
   opts = {
     show_icons = true,
-    leader_key = ";", -- Recommended to be a single key
-    buffer_leader_key = "m", -- Per Buffer Mappings
+  },
+  cmd = "Arrow",
+  keys = {
+    {
+      mode = "n",
+      "<leader>t",
+      function()
+        require("arrow").open()
+      end,
+      desc = "Arrow",
+      nowait = true,
+    },
+    {
+      mode = "n",
+      "<leader>m",
+      function()
+        require("arrow").open_bookmarks()
+      end,
+      desc = "Arrow Buffer Bookmarks",
+      nowait = true,
+    },
   },
 }
