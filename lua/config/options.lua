@@ -16,3 +16,7 @@ vim.opt_local.expandtab = true -- Expand tab to 2 spaces
 for _, quote in ipairs({ '"', "'", "`" }) do
   vim.keymap.set({ "x", "o" }, "a" .. quote, "2i" .. quote)
 end
+
+if vim.g.neovide then
+  vim.o.guifont = "RobotoMono Nerd Font:h12" -- text below applies for VimScript
+end
