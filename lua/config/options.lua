@@ -12,11 +12,13 @@ vim.opt_local.shiftwidth = 2 -- Number of spaces to use for each step of (auto)i
 vim.opt_local.softtabstop = 2 -- Number of spaces that a <Tab> counts for while performing editing operations
 vim.opt_local.tabstop = 2 -- Number of spaces that a <Tab> in the file counts for
 vim.opt_local.expandtab = true -- Expand tab to 2 spaces
+vim.opt.mouse = ""
+vim.g.gruvbox_material_background = "hard"
 
 for _, quote in ipairs({ '"', "'", "`" }) do
   vim.keymap.set({ "x", "o" }, "a" .. quote, "2i" .. quote)
 end
 
 if vim.g.neovide then
-  vim.o.guifont = "RobotoMono Nerd Font:h12" -- text below applies for VimScript
+  vim.o.guifont = "JetBrainsMono Nerd Font:h9" -- text below applies for VimScript
 end
