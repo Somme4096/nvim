@@ -4,14 +4,19 @@ return {
   },
   {
     "mcchrish/zenbones.nvim",
+    lazy = true,
     dependencies = {
       "rktjmp/lush.nvim",
     },
   },
   {
+    "rmehri01/onenord.nvim",
+    lazy = true,
+  },
+  {
     "rose-pine/neovim",
     name = "rose-pine",
-    lazy = false,
+    lazy = true,
     config = function()
       require("rose-pine").setup({
         highlight_groups = {
@@ -33,13 +38,17 @@ return {
   },
   {
     "sainnhe/gruvbox-material",
-    lazy = false,
+    lazy = true,
     config = function()
       -- Optionally configure and load the colorscheme
       -- directly inside the plugin declaration.
       vim.g.gruvbox_material_enable_italic = true
-      vim.cmd.colorscheme("gruvbox-material")
     end,
+  },
+  {
+    "horanmustaplot/xcarbon.nvim",
+    lazy = true, -- make sure we load this during startup if it is your main colorscheme
+    config = function() end,
   },
   {
     "folke/tokyonight.nvim",
@@ -82,6 +91,7 @@ return {
   },
   {
     "catppuccin/nvim",
+    lazy = true,
     config = function()
       require("catppuccin").setup({
         integrations = {
@@ -93,6 +103,16 @@ return {
       })
     end,
   },
+  {
+    "e-q/okcolors.nvim",
+    name = "okcolors",
+    lazy = true,
+    config = function()
+      require("okcolors").setup({
+        variant = "smooth", -- "smooth" or "sharp", defaults to "smooth"
+      })
+    end,
+  },
   -- {
   --   "ramojus/mellifluous.nvim",
   --   lazy = false,
@@ -100,45 +120,45 @@ return {
   --     color_set = "kanagawa_dragon",
   --   },
   -- },
-  {
-    "rebelot/kanagawa.nvim",
-    lazy = true,
-    config = function()
-      return {
-        require("kanagawa").setup({
-          colors = {
-            theme = {
-              all = {
-                ui = {
-                  bg_gutter = "none",
-                },
-              },
-            },
-          },
-          overrides = function(colors)
-            local theme = colors.theme
-            return {
-              TelescopeTitle = { fg = theme.ui.special, bold = true },
-              TelescopePromptNormal = { bg = theme.ui.bg_p1 },
-              TelescopePromptBorder = { fg = theme.ui.bg_p1, bg = theme.ui.bg_p1 },
-              TelescopeResultsNormal = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m1 },
-              TelescopeResultsBorder = { fg = theme.ui.bg_m1, bg = theme.ui.bg_m1 },
-              TelescopePreviewNormal = { bg = theme.ui.bg_dim },
-              TelescopePreviewBorder = { bg = theme.ui.bg_dim, fg = theme.ui.bg_dim },
-              Pmenu = { fg = theme.ui.shade0, bg = theme.ui.bg_p1 }, -- add `blend = vim.o.pumblend` to enable transparency
-              PmenuSel = { fg = "NONE", bg = theme.ui.bg_p2 },
-              PmenuSbar = { bg = theme.ui.bg_m1 },
-              PmenuThumb = { bg = theme.ui.bg_p2 },
-            }
-          end,
-          commentStyle = { italic = true },
-          functionStyle = {},
-          keywordStyle = { italic = true },
-          statementStyle = { bold = true },
-        }),
-      }
-    end,
-  },
+  -- {
+  --   "rebelot/kanagawa.nvim",
+  --   lazy = true,
+  --   config = function()
+  --     return {
+  --       require("kanagawa").setup({
+  --         colors = {
+  --           theme = {
+  --             all = {
+  --               ui = {
+  --                 bg_gutter = "none",
+  --               },
+  --             },
+  --           },
+  --         },
+  --         overrides = function(colors)
+  --           local theme = colors.theme
+  --           return {
+  --             TelescopeTitle = { fg = theme.ui.special, bold = true },
+  --             TelescopePromptNormal = { bg = theme.ui.bg_p1 },
+  --             TelescopePromptBorder = { fg = theme.ui.bg_p1, bg = theme.ui.bg_p1 },
+  --             TelescopeResultsNormal = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m1 },
+  --             TelescopeResultsBorder = { fg = theme.ui.bg_m1, bg = theme.ui.bg_m1 },
+  --             TelescopePreviewNormal = { bg = theme.ui.bg_dim },
+  --             TelescopePreviewBorder = { bg = theme.ui.bg_dim, fg = theme.ui.bg_dim },
+  --             Pmenu = { fg = theme.ui.shade0, bg = theme.ui.bg_p1 }, -- add `blend = vim.o.pumblend` to enable transparency
+  --             PmenuSel = { fg = "NONE", bg = theme.ui.bg_p2 },
+  --             PmenuSbar = { bg = theme.ui.bg_m1 },
+  --             PmenuThumb = { bg = theme.ui.bg_p2 },
+  --           }
+  --         end,
+  --         commentStyle = { italic = true },
+  --         functionStyle = {},
+  --         keywordStyle = { italic = true },
+  --         statementStyle = { bold = true },
+  --       }),
+  --     }
+  --   end,
+  -- },
   -- {
   --   "olimorris/onedarkpro.nvim",
   --   priority = 1000, -- Ensure it loads first
