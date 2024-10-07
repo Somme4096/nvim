@@ -5,6 +5,9 @@ luac.out
 lazyvim.json
 lazy-lock.json
 
+# Ignore hyprdots(hyde)-specific files
+theme.txt
+
 # luarocks build files
 *.src.rock
 *.zip
