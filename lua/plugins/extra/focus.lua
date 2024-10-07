@@ -37,7 +37,7 @@ return {
         commands = true, -- Create Focus commands
         autoresize = {
           enable = true, -- Enable or disable auto-resizing of splits
-          width = 100, -- Force width for the focused window
+          width = 110, -- Force width for the focused window
           height = 0, -- Force height for the focused window
           minwidth = 40, -- Force minimum width for the unfocused window
           minheight = 0, -- Force minimum height for the unfocused window
