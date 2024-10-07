@@ -23,3 +23,8 @@ keymap(
   '<cmd>silent! lua require("telescope._extensions.schema_companion_builtin").select_schema()<cr>',
   { silent = true, desc = "Select schema" }
 )
+
+keymap("n", "<leader>aa", "<cmd>CodeCompanionActions<cr>", { noremap = true, silent = true })
+keymap("v", "<leader>aa", "<cmd>CodeCompanionActions<cr>", { noremap = true, silent = true })
+keymap("n", "<leader>ac", "<cmd>CodeCompanionChat Toggle<cr>", { noremap = true, silent = true })
+keymap("v", "<leader>ac", "<cmd>CodeCompanionChat Toggle<cr>", { noremap = true, silent = true })
