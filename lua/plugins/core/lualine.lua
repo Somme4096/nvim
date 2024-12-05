@@ -62,15 +62,21 @@ return {
             function()
               return require("arrow.statusline").text_for_statusline_with_icons()
             end,
+            {
+              "buffers",
+              show_filename_only = true,
+              symbols = {
+                modified = " ●",
+                alternate_file = "",
+                directory = "",
+              },
+              mode = 2,
+            },
           },
 
           lualine_c = {
-            { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
-            { LazyVim.lualine.pretty_path() },
-            {
-              modified, --color = { bg = colors.Kanagawablack }
-            },
-
+            -- { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
+            -- { LazyVim.lualine.pretty_path() },
             {
               "diagnostics",
               symbols = {
