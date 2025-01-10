@@ -47,6 +47,7 @@ return {
   },
   {
     "horanmustaplot/xcarbon.nvim",
+    enabled = false,
     lazy = false, -- make sure we load this during startup if it is your main colorscheme
     config = function() end,
   },
@@ -105,6 +106,7 @@ return {
   },
   {
     "e-q/okcolors.nvim",
+    enabled = false,
     name = "okcolors",
     lazy = true,
     config = function()
@@ -113,13 +115,13 @@ return {
       })
     end,
   },
-  -- {
-  --   "ramojus/mellifluous.nvim",
-  --   lazy = false,
-  --   opts = {
-  --     color_set = "kanagawa_dragon",
-  --   },
-  -- },
+  {
+    "ramojus/mellifluous.nvim",
+    lazy = true,
+    opts = {
+      colorset = "alduin",
+    },
+  },
   -- {
   --   "rebelot/kanagawa.nvim",
   --   lazy = true,
@@ -166,7 +168,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyobones",
+      colorscheme = "mellifluous",
     },
   },
 }
