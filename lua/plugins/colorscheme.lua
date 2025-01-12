@@ -119,7 +119,7 @@ return {
     "ramojus/mellifluous.nvim",
     lazy = true,
     opts = {
-      colorset = "alduin",
+      colorset = "mellifluous",
     },
   },
   -- {
