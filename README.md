@@ -45,18 +45,14 @@ Based on `LazyVim@latest`.
 
 # Screenshots
 
-### `rose-pine-dawn`
-![240828_01h38m01s_screenshot](https://github.com/user-attachments/assets/9d167633-4868-4a71-b70d-9f8fbef74679)
-
 ### `mellifluous`
-![Screenshot From 2025-01-11 02-11-41](https://github.com/user-attachments/assets/22483897-58ad-464e-8ef1-a56ed8cdc485)
+![Screenshot From 2025-01-12 19-40-11](https://github.com/user-attachments/assets/b63920f2-91c0-4781-82ce-4f6677a2496a)
 
+### telescope
+
+![Screenshot From 2025-01-12 19-38-40](https://github.com/user-attachments/assets/abd29648-36e7-4736-82fe-cb0a5cb197b0)
 
 
 # Contributing
 
 Feel free to open issues or submit pull requests for any improvements or bug fixes.
-
-# License
-
-This configuration is released under the MIT License.
