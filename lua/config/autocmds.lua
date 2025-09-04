@@ -16,3 +16,17 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.wo.conceallevel = 0
   end,
 })
+
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    -- Set your default directory
+    local default_dir = vim.fn.expand("~/Documents/org/") -- Change this path
+
+    -- Change to the directory
+    vim.cmd("cd " .. default_dir)
+
+    -- Load and open Neo-tree
+    require("lazy").load({ plugins = { "neo-tree.nvim" } })
+    vim.cmd("Neotree show")
+  end,
+})
