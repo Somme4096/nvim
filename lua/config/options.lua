@@ -24,5 +24,14 @@ for _, quote in ipairs({ '"', "'", "`" }) do
 end
 
 if vim.g.neovide then
-  vim.o.guifont = "JetBrainsMono Nerd Font:h9" -- text below applies for VimScript
+  vim.o.guifont = "RobotoMono Nerd Font:h9" -- text below applies for VimScript
+  vim.opt.linespace = 1
+  vim.g.neovide_padding_top = 7
+  vim.g.neovide_padding_bottom = 5
+  vim.g.neovide_padding_right = 0
+  vim.g.neovide_padding_left = 0
+  -- Titlebar color (Currently windows only)
+  vim.g.neovide_title_background_color =
+    string.format("%x", vim.api.nvim_get_hl(0, { id = vim.api.nvim_get_hl_id_by_name("Normal") }).bg)
+  vim.g.neovide_title_text_color = "pink"
 end
