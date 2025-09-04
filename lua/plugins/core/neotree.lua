@@ -71,7 +71,7 @@ return {
         },
       },
       window = {
-        position = "left",
+        position = "bottom",
         width = 35,
         mappings = {
           ["l"] = "open",
