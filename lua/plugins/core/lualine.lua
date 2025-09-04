@@ -123,7 +123,7 @@ return {
           {
             function() return "  " .. require("dap").status() end,
             cond = function() return package.loaded["dap"] and require("dap").status() ~= "" end,
-            color = function() return LazyVim.ui.fg("Debug") end,
+            color = function() return {fg = Snacks.util.color("debug") } end,
           },
             {
               "diff",
