@@ -52,6 +52,23 @@ return {
               return "󱡓"
             end,
             { "mode" },
+            {
+              "buffers",
+              show_filename_only = true,
+              symbols = {
+                modified = " ●",
+                alternate_file = "",
+                directory = "",
+              },
+              mode = 2,
+              -- Automatically updates active buffer color to match color of other components (will be overidden if buffers_color is set)
+              use_mode_colors = false,
+              buffers_color = {
+                -- Same values as the general color option can be used here.
+                active = "lualine_a_normal", -- Color for active buffer.
+                inactive = "lualine_b_inactive", -- Color for inactive buffer.
+              },
+            },
           },
           lualine_b = {
             {
@@ -62,16 +79,6 @@ return {
             function()
               return require("arrow.statusline").text_for_statusline_with_icons()
             end,
-            {
-              "buffers",
-              show_filename_only = true,
-              symbols = {
-                modified = " ●",
-                alternate_file = "",
-                directory = "",
-              },
-              mode = 2,
-            },
           },
 
           lualine_c = {
