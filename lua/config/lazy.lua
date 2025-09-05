@@ -14,6 +14,26 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    local default_dir = vim.fn.expand("~/Documents/org/")
+
+    -- Check if directory exists first
+    if vim.fn.isdirectory(default_dir) == 1 then
+      vim.cmd("cd " .. default_dir)
+
+      -- Use a slight delay to ensure neo-tree is ready
+      vim.defer_fn(function()
+        vim.cmd("Neotree show")
+      end, 100)
+    else
+      print("Directory not found: " .. default_dir)
+    end
+  end,
+})
+
+vim.cmd("language en_US.utf8")
+
 require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
