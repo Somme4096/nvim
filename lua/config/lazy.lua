@@ -32,8 +32,6 @@ vim.api.nvim_create_autocmd("VimEnter", {
   end,
 })
 
-vim.cmd("language en_US.utf8")
-
 require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
