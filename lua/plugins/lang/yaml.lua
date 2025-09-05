@@ -1,5 +1,6 @@
 return {
   "cenk1cenk2/schema-companion.nvim",
+  enabled = false,
   dependencies = {
     { "neovim/nvim-lspconfig" },
     { "nvim-lua/plenary.nvim" },
