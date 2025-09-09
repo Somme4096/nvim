@@ -14,7 +14,7 @@ return {
         org_todo_keywords = { "TODO", "DOING", "IDEA", "WAIT", "NEXT", "ACTIVE", "MEETING", "|", "CANCELLED", "DONE" },
         org_todo_keyword_faces = {
           NEXT = ":foreground #cce6ff",
-          TODO = ":weight bold :foreground #197300",
+          TODO = ":weight bold :foreground #ff3333",
           DOING = ":slant italic :foreground #7f6df2",
         },
         org_capture_templates = {
