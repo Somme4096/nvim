@@ -8,14 +8,19 @@ return {
       -- Setup orgmode
       require("orgmode").setup({
         org_agenda_files = "~/Documents/**/*",
-        org_default_notes_file = "~/Documents/org/Inbox.org",
+        org_default_notes_file = "~/Documents/org/daily.org",
         org_startup_folded = "showeverything",
         org_startup_indented = false,
-        org_todo_keywords = { "TODO", "DOING", "NEXT", "WAIT", "|", "DROP", "DONE" },
+        org_todo_keywords = { "TODO", "DOING", "IDEA", "WAIT", "NEXT", "ACTIVE", "MEETING", "|", "CANCELLED", "DONE" },
+        org_todo_keyword_faces = {
+          NEXT = ":foreground #cce6ff",
+          TODO = ":weight bold :foreground #197300",
+          DOING = ":slant italic :foreground #7f6df2",
+        },
         org_capture_templates = {
           j = {
             description = "daily",
-            template = "\n*** %<%Y-%m-%d> %<%A>\n**** %U\n\n%?",
+            template = "\n* %<%Y-%m-%d> %<%A>\n**** %U\n\n** Work log%?",
             target = "~/Documents/org/Inbox.org",
           },
         },
