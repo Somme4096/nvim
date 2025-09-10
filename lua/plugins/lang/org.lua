@@ -11,7 +11,7 @@ return {
         org_default_notes_file = "~/Documents/org/daily.org",
         org_startup_folded = "showeverything",
         org_startup_indented = false,
-        org_todo_keywords = { "TODO", "DOING", "IDEA", "WAIT", "NEXT", "ACTIVE", "MEETING", "|", "CANCELLED", "DONE" },
+        org_todo_keywords = { "TODO", "DOING", "IDEA", "WAIT", "NEXT", "ACTIVE", "MEETING", "|", "DONE", "CANCELLED" },
         org_todo_keyword_faces = {
           NEXT = ":foreground #cce6ff",
           TODO = ":weight bold :foreground #ff3333",
