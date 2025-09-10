@@ -9,7 +9,7 @@ return {
       require("orgmode").setup({
         org_agenda_files = "~/Documents/**/*",
         org_default_notes_file = "~/Documents/org/daily.org",
-        org_startup_folded = "showeverything",
+        -- org_startup_folded = "showeverything",
         org_startup_indented = false,
         org_todo_keywords = { "TODO", "DOING", "IDEA", "WAIT", "NEXT", "ACTIVE", "MEETING", "|", "DONE", "CANCELLED" },
         org_todo_keyword_faces = {
