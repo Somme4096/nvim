@@ -11,6 +11,7 @@ return {
         org_default_notes_file = "~/Documents/org/daily.org",
         -- org_startup_folded = "showeverything",
         org_startup_indented = false,
+        org_blank_before_new_entry = { heading = false, plain_list_item = false },
         org_todo_keywords = {
           "TODO",
           "DOING",
