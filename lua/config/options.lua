@@ -27,7 +27,7 @@ for _, quote in ipairs({ '"', "'", "`" }) do
 end
 
 if vim.g.neovide then
-  vim.o.guifont = "RobotoMono Nerd Font,Noto Sans JP:h9" -- text below applies for VimScript
+  vim.o.guifont = "CommitMono Nerd Font" -- text below applies for VimScript
   vim.opt.linespace = 2
   vim.g.neovide_padding_top = 7
   vim.g.neovide_padding_bottom = 5
