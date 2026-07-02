@@ -6,7 +6,10 @@ return {
       {
         "<leader>fe",
         function()
-          require("neo-tree.command").execute({ toggle = true, dir = LazyVim.root() })
+          local manager = require("neo-tree.sources.manager")
+          local fs_state = manager.get_state("filesystem")
+          local dir = fs_state and fs_state.path or LazyVim.root()
+          require("neo-tree.command").execute({ toggle = true, dir = dir })
         end,
         desc = "Explorer NeoTree (Root Dir)",
       },
